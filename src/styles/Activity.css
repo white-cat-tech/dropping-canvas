@@ -1,0 +1,51 @@
+.activity {
+  position: absolute;
+  background-color: #4caf50;
+  z-index: 3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity:hover {
+  transform: scale(1.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.activity.horizontal {
+  height: 10px;
+  border-radius: 5px;
+}
+
+.activity.vertical {
+  width: 10px;
+  border-radius: 5px;
+}
+
+.connection-point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+.activity.horizontal .connection-point.head {
+  right: -5px;
+  top: 0;
+}
+
+.activity.horizontal .connection-point.butt {
+  left: -5px;
+  top: 0;
+}
+
+.activity.vertical .connection-point.head {
+  bottom: -5px;
+  left: 0;
+}
+
+.activity.vertical .connection-point.butt {
+  top: -5px;
+  left: 0;
+}

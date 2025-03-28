@@ -1,0 +1,50 @@
+.canvas {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  overflow: hidden;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.grid-cell {
+  position: absolute;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  transition: background-color 0.2s ease;
+}
+
+.grid-cell:hover {
+  background-color: rgba(200, 200, 200, 0.3) !important;
+}
+
+.drop-location {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  pointer-events: none;
+  transition: background-color 0.2s ease;
+}
+
+.drop-location.hovered {
+  background-color: rgba(0, 200, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 200, 0, 0.5);
+}
+
+.dragged-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0.7;
+}
+
+.dragged-element.activity {
+  background-color: #4caf50;
+}
+
+.dragged-element.event {
+  background-color: #f44336;
+  border-radius: 50%;
+}
